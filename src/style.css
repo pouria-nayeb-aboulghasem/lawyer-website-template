@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-primary: hsl(41, 54%, 55%);
+  --color-primary-alt: hsl(41, 54%, 50%);
+  --color-secondary: hsl(35, 50%, 8%);
+  --color-title: hsl(41, 60%, 8%); /* text-title */
+  --color-default: hsl(41, 8%, 32%); /* text */
+  --color-light: hsl(0, 0%, 99%);
+  --color-gray: hsl(0, 0%, 85%);
+  --color-body: hsl(0, 0%, 99%);
+  --color-container: hsl(0, 0%, 100%);
+  --color-shadow: hsla(35, 50%, 8%, 0.9);
+  --color-service: hsla(35, 50%, 8%, 0.5);
+  --shadow-primary: 0 8px 24px hsla(41, 54%, 55%, 0.3);
+  --inset-shadow: inset 0 -96px 48px -40px hsl(0, 0%, 99%);
+  --shadow-header: 0 2px 16px hsla(0, 0%, 0%, 0.1);
+  --shadow-card: 0 4px 24px hsla(0, 0%, 0%, 0.15);
+  --shadow-service:
+    inset 0 -96px 48px -40px hsl(0, 0%, 99%),
+    inset 0 96px 48px -40px hsl(0, 0%, 99%);
+
+  --font-montserrat: "Montserrat", sans-serif; /* font-montserrat  */
+  --font-playfair-display: "Playfair Display", serif;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-secondary font-semibold font-playfair-display;
+  }
+}
+
+@utility container-page {
+  @apply max-w-280 mx-4;
+}
+
+@utility section {
+  @apply pt-20 pb-4;
+}
+
+@utility section-title {
+  @apply text-center mb-2;
+}
+
+@utility menu-active {
+  @apply right-0;
+}
+
+@utility button {
+  @apply bg-primary text-light font-semibold inline-flex items-center gap-x-2 p-2 pr-4 rounded-[4rem] transition-all duration-400 hover:bg-primary-alt hover:shadow-primary;
+}
+
+@utility menu-active {
+  @apply right-0;
+}
+
+@utility header-active {
+  @apply bg-body shadow-header;
+}
+
+@utility profile-mask-image {
+  mask-image: linear-gradient(to bottom, hsl(0, 0%, 0%) 80%, transparent 95%);
+}
+
+@utility case-gradient {
+  background-image: linear-gradient(
+    180deg,
+    hsla(40, 51%, 8%, 0.8) 70%,
+    hsla(40, 50%, 35%, 0.8) 100%
+  );
+}
+
+.case-swiper {
+  @apply w-full h-full pb-20;
+}
+
+.case .swiper-button-prev::after,
+.case .swiper-button-next::after {
+  content: "";
+}
+
+.case :is(.swiper-button-prev, .swiper-button-next) {
+  @apply top-[initial] left-[initial] -bottom-0 w-10 h-10 m-[initial] bg-body border border-primary rounded-2xl text-primary text-2xl transition-all duration-400;
+}
+
+.case :is(.swiper-button-prev:hover, .swiper-button-next:hover) {
+  @apply bg-primary text-light;
+}
+
+.case .swiper-button-prev {
+  left: calc(50% - 3rem);
+}
+
+.case .swiper-button-next {
+  right: calc(50% - 3rem);
+}
+
+.slide {
+  @apply relative w-85 rounded-2xl p-5 overflow-hidden grid grid-rows-[max-content];
+}
+
+.service-card:hover {
+  background-color: hsl(0, 0%, 100%);
+}
