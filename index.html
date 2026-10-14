@@ -29,8 +29,8 @@
       </a>
 
       <div id="menu"
-        class="fixed top-0 -right-full bg-shadow w-[80%] h-full backdrop-blur-sm pt-24 pr-0 pb-8 pl-12 z-100 transition-all duration-400">
-        <ul class="flex flex-col gap-10">
+        class="fixed top-0 -right-full bg-shadow w-[80%] h-full backdrop-blur-sm pt-24 pr-0 pb-8 pl-12 z-100 transition-all duration-400 md:static md:h-auto md:w-auto md:p-0 md:bg-transparent nav-menu">
+        <ul class="flex flex-col gap-10 md:flex-row md:justify-end md:items-end">
           <li>
             <a href="#home"
               class="text-light font-semibold transition-colors duration-400 hover:text-primary menu-link">Home</a>
@@ -40,12 +40,12 @@
               class="text-light font-semibold transition-colors duration-400 hover:text-primary menu-link">About</a>
           </li>
           <li>
-            <a href="#study"
+            <a href="#case"
               class="text-light font-semibold transition-colors duration-400 hover:text-primary menu-link">Case
               study</a>
           </li>
           <li>
-            <a href="#services"
+            <a href="#service"
               class="text-light font-semibold transition-colors duration-400 hover:text-primary menu-link">Services</a>
           </li>
           <li>
@@ -54,13 +54,14 @@
           </li>
         </ul>
 
-        <button id="close-mobile-menu" class="absolute text-light top-4 right-4 color-light text-lg cursor-pointer"
+        <button id="close-mobile-menu"
+          class="absolute text-light top-4 right-4 color-light text-lg cursor-pointer md:hidden"
           aria-label="Close mobile menu">
           <i class="ri-close-large-line"></i>
         </button>
       </div>
 
-      <div>
+      <div class="md:hidden">
         <button id="open-mobile-menu"
           class="text-light fs-lg cursor-pointer transition-colors duration-400 group-[.header-active]:text-title"
           aria-label="Open mobile menu">
@@ -73,20 +74,20 @@
   <main class="overflow-hidden">
 
     <!-- home -->
-    <div id="home" class="section relative">
+    <div id="home" class="section relative" data-section="home">
       <img src="src/assets/imgs/home-bg.png" alt=""
         class="absolute top-0 left-0 w-full h-full object-cover object-center z-1">
       <div class="absolute top-0 left-0 w-full h-full bg-shadow z-5 inset-shadow"></div>
 
-      <div class="container-page grid gap-6 relative z-10 pt-12 gap-y-12">
+      <div class="container-page grid gap-6 relative z-10 pt-12 gap-y-12 md:grid-cols-2">
 
-        <section class="text-center">
-          <h1 class="text-light mb-4 text-5xl">
+        <section class="text-center mx-auto sm:max-w-lg md:max-w-none md:[text-align:initial]">
+          <h1 class="text-light mb-4 text-5xl md:text-7xl">
             Your Trusted <br>
             Legal <span class="italic">Guidance</span>
           </h1>
 
-          <p class="text-light mb-12">
+          <p class="text-light mb-12 md:text-xl">
             Expert legal advice for your personal and business needs. Let’s build
             your strongest case together.
           </p>
@@ -101,12 +102,12 @@
           </a>
         </section>
 
-        <div class="relative justify-self-center">
+        <div class="relative justify-self-center sm:max-w-lg">
           <img src="src/assets/imgs/home-perfil.png" alt="" class="w-[340] profile-mask-image">
-          <img src="src/assets/imgs/home-stamp.svg" alt="" class="absolute top-16 right-4 width-[70px]">
+          <img src="src/assets/imgs/home-stamp.svg" alt="" class="absolute top-16 right-4 md:w-24">
         </div>
 
-        <h2 class="absolute -bottom-1 justify-self-center text-5xl text-light">
+        <h2 class="absolute -bottom-1 justify-self-center text-5xl text-light md:text-8xl md:bottom-1">
           Paul Laws
         </h2>
 
@@ -114,22 +115,21 @@
     </div>
     <!-- /home -->
 
-
     <!-- about -->
-    <div id="about" class="section">
+    <div id="about" class="section" data-section="about">
       <div class="container-page grid gap-6">
 
-        <div class="text-center">
+        <div class="text-center mx-auto sm:max-w-lg md:max-w-none">
           <h5 class="font-bold mb-4">
             <span class="inline-block w-3 h-3 rounded-full bg-primary mr-1"></span>
             About me
           </h5>
 
-          <p class="font-semibold text-title font-playfair-display text-lg mb-8">
-            I am a committed legal professional with over <span class="text-primary italic text-xl">20+</span> of
+          <p class="font-semibold text-title font-playfair-display text-lg mb-8 md:text-4xl">
+            I am a committed legal professional with over <span class="text-primary italic">20+</span> of
             experience defending my
-            clients' rights and interests. Having handled more than <span
-              class="text-primary italic text-xl">100+</span> cases, I offer
+            clients' rights and interests. Having handled more than <span class="text-primary italic">100+</span> cases,
+            I offer
             clear guidance and strategic, results-oriented solutions.
           </p>
 
@@ -147,9 +147,9 @@
     <!-- /about -->
 
     <!-- case -->
-    <div id="case" class="case section">
+    <div id="case" class="case section" data-section="case">
       <div class="grid gap-12 relative">
-        <section class="container-page text-center">
+        <section class="container-page text-center mx-auto sm:max-w-lg">
 
           <header class="mb-3">
             <h5 class="font-bold mb-3">
@@ -157,13 +157,13 @@
               CASE HIGHLIGHTS
             </h5>
 
-            <h2 class="text-3xl font-bold">
+            <h2 class="text-3xl font-bold md:text-5xl">
               Recent Cases with <br>
               Proven <span class="italic">Results</span>
             </h2>
           </header>
 
-          <p>Explore real-life cases where I have provided effective legal solutions and achieved
+          <p class="md:text-lg">Explore real-life cases where I have provided effective legal solutions and achieved
             results for my clients.</p>
 
         </section>
@@ -301,36 +301,38 @@
 
     <!-- process -->
     <div id="process" class="section">
-      <div class="container-page text-center">
+      <div class="container-page text-center mx-auto sm:max-w-lg">
         <header class="mb-3">
           <h5 class="font-bold mb-3">
             <span class="inline-block w-3 h-3 rounded-full bg-primary mr-1"></span>
             CASE PROCESS
           </h5>
 
-          <h2 class="text-3xl font-bold">
+          <h2 class="text-3xl font-bold md:text-5xl">
             Three Key <br>
             <span class="italic">Process</span>
           </h2>
         </header>
 
-        <p>
+        <p class="md:text-lg">
           I offer reliable legal services, backed by proven experience and a
           results-oriented approach.
         </p>
       </div>
 
-      <div class="container-page grid gap-6 gap-y-12 mt-8">
-        <img src="src/assets/imgs/process-img.png" alt="" class="w-70 justify-self-center">
+      <div
+        class="container-page grid gap-6 gap-y-12 mt-8 mx-auto sm:max-w-lg lg:max-w-280 lg:grid-cols-[400px_1fr] md:items-center">
+        <img src="src/assets/imgs/process-img.png" alt="" class="w-70 justify-self-center md:w-full">
 
-        <div class="grid gap-6">
+        <div class="grid gap-6 md:px-16">
           <!-- card -->
-          <div class="flex gap-x-2 bg-container shadow-card p-3 pb-4 rounded-2xl transition-all duration-400">
+          <div
+            class="flex gap-x-2 bg-container shadow-card p-3 pb-4 rounded-2xl transition-all duration-400 md:w-full md:items-center">
             <span
-              class="w-10 h-10 rounded-full shrink-0 border border-gray grid place-items-center text-title font-bold font-playfair-display text-lg">01</span>
+              class="w-10 h-10 rounded-full shrink-0 border border-gray grid place-items-center text-title font-bold font-playfair-display text-lg md:w-15 md:h-15">01</span>
 
-            <article class="data">
-              <h3 class="fs-xl mt-1 mb-4">Discover & Strategic analysis</h3>
+            <article class="px-4">
+              <h3 class="fs-2xl font-bold mt-1 mb-4">Discover & Strategic analysis</h3>
               <p>
                 I begin with an intensive one-on consultation to evaluate the unique merits of
                 your case. I conduct exhaustive research to build a custom legal strategy
@@ -340,12 +342,13 @@
           </div>
           <!-- /card -->
 
-          <div class="flex gap-x-2 bg-container shadow-card p-3 pb-4 rounded-2xl transition-all duration-400">
+          <div
+            class="flex gap-x-2 bg-container shadow-card p-3 pb-4 rounded-2xl transition-all duration-400 md:items-center md:-left-12 md:relative">
             <span
-              class="w-10 h-10 rounded-full shrink-0 border border-gray grid place-items-center text-title font-bold font-playfair-display text-lg">02</span>
+              class="w-10 h-10 rounded-full shrink-0 border border-gray grid place-items-center text-title font-bold font-playfair-display text-lg md:w-15 md:h-15">02</span>
 
-            <article class="data">
-              <h3 class="fs-xl mt-1 mb-4">Execution & Diligent defense</h3>
+            <article class="px-4">
+              <h3 class="fs-2xl font-bold mt-1 mb-4">Execution & Diligent defense</h3>
               <p>
                 I begin with an intensive one-on consultation to evaluate the unique merits of
                 your case. I conduct exhaustive research to build a custom legal strategy
@@ -354,12 +357,13 @@
             </article>
           </div>
 
-          <div class="flex gap-x-2 bg-container shadow-card p-3 pb-4 rounded-2xl transition-all duration-400">
+          <div
+            class="flex gap-x-2 bg-container shadow-card p-3 pb-4 rounded-2xl transition-all duration-400 md:items-center">
             <span
-              class="w-10 h-10 rounded-full shrink-0 border border-gray grid place-items-center text-title font-bold font-playfair-display text-lg">03</span>
+              class="w-10 h-10 rounded-full shrink-0 border border-gray grid place-items-center text-title font-bold font-playfair-display text-lg md:w-15 md:h-15">03</span>
 
-            <article class="data">
-              <h3 class="fs-xl mt-1 mb-4">Resolution & Finality</h3>
+            <article class="px-4">
+              <h3 class="fs-2xl font-bold mt-1 mb-4">Resolution & Finality</h3>
               <p>
                 I begin with an intensive one-on consultation to evaluate the unique merits of
                 your case. I conduct exhaustive research to build a custom legal strategy
@@ -374,15 +378,15 @@
     <!-- /process -->
 
     <!-- service -->
-    <div id="service" class="section relative mt-12">
-      <div class="container-page relative z-10 pt-6 text-center">
+    <div id="service" class="section relative mt-12" data-section="service">
+      <div class="container-page relative z-10 pt-6 text-center mx-auto sm:max-w-lg">
         <header class="mb-6">
           <h5 class="font-bold text-light mb-3">
             <span class="inline-block w-3 h-3 rounded-full bg-primary mr-1"></span>
             MY SERVICES
           </h5>
 
-          <h2 class="text-3xl text-light font-bold">
+          <h2 class="text-3xl text-light font-bold md:text-5xl">
             Services Tailored <br>
             <span>To You Needs</span>
           </h2>
@@ -402,7 +406,7 @@
         class="absolute top-0 left-0 w-full h-full object-cover object-center z-1">
       <div class="absolute top-0 left-0 w-full h-full shadow-service bg-service z-5"></div>
 
-      <div class="grid gap-6 container-page relative z-10 pt-12 pb-28">
+      <div class="grid gap-6 container-page relative z-10 pt-12 pb-28 mx-auto sm:max-w-lg md:grid-cols-3 md:max-w-280">
 
         <!-- card -->
         <article class="bg-[hsla(0,0%,100%, 0.1)] backdrop-blur-lg p-4 rounded-lg border border-gray grid gap-y-4">
@@ -525,9 +529,473 @@
     </div>
     <!-- /service -->
 
+    <!-- questions -->
+    <div class="section md:grid">
+      <div class="container-page relative z-10 pt-6 text-center mx-auto sm:max-w-lg">
+        <header class="mb-6">
+          <h5 class="font-bold mb-3">
+            <span class="inline-block w-3 h-3 rounded-full bg-primary mr-1"></span>
+            FAQS
+          </h5>
+
+          <h2 class="text-3xl font-bold md:text-5xl">
+            Frequently <br>
+            <span>Asked Questions</span>
+          </h2>
+        </header>
+      </div>
+
+      <div class="container-page grid gap-12 mt-8 mx-auto sm:max-w-lg md:grid-cols-3 md:max-w-280">
+        <div class="text-center md:col-span-1">
+          <img src="src/assets/imgs/questions-img.png" alt="" class="w-25 rounded-full mx-auto">
+
+          <h3 class="text-2xl my-2">
+            Clear advice, real <br> answers & no pressure.
+          </h3>
+
+          <p class="mb-8">
+            I answer common questions about my services, fees, and consultations with
+            full transparency.
+          </p>
+
+          <a href="#" class="button">
+            <span>
+              <i class="ri-arrow-right-up-line"></i>
+            </span>
+
+            Inquire Via WhatsApp
+          </a>
+        </div>
+
+        <div class="grid gap-y-4 md:col-span-2">
+          <!-- card -->
+          <div class="bg-container shadow-card border border-gray rounded-xl question-card question-open">
+            <button
+              class="w-full pt-4 pl-4 pr-2 pb-6 flex gap-x-2 items-center justify-between text-[initial] cursor-pointer question-button">
+              <h3 class="text-xl">Do you offer an initial consultation?</h3>
+
+              <span
+                class="w-8 h-8 bg-container text-primary border border-gray rounded-full text-3xl shrink-0 grid items-center transition-all duration-400 question-arrow ">
+                <i class="ri-arrow-down-s-line"></i>
+              </span>
+            </button>
+
+            <p class="max-h-0 overflow-hidden opacity-0 px-4 transition-all duration-400 question-text">
+              Fees depend on the nature, complexity, and duration of your case.
+              I make sure to clearly explain all costs before beginning any work, so
+              you always know what to expect. I also take the time to discuss potential
+              additional expenses upfront and answer any questions you may have.
+            </p>
+          </div>
+          <!-- /card -->
+
+          <div class="bg-container shadow-card border border-gray rounded-xl question-card question-close">
+            <button
+              class="w-full pt-4 pl-4 pr-2 pb-6 flex gap-x-2 items-center justify-between text-[initial] cursor-pointer question-button">
+              <h3 class="text-xl">How are legal fees calculated?</h3>
+
+              <span
+                class="w-8 h-8 bg-container text-primary border border-gray rounded-full text-3xl shrink-0 grid items-center transition-all duration-400 question-arrow ">
+                <i class="ri-arrow-down-s-line"></i>
+              </span>
+            </button>
+
+            <p class="max-h-0 overflow-hidden opacity-0 px-4 transition-all duration-400 question-text">
+              Fees depend on the nature, complexity, and duration of your case.
+              I make sure to clearly explain all costs before beginning any work, so
+              you always know what to expect. I also take the time to discuss potential
+              additional expenses upfront and answer any questions you may have.
+            </p>
+          </div>
+
+          <div class="bg-container shadow-card border border-gray rounded-xl question-card question-close">
+            <button
+              class="w-full pt-4 pl-4 pr-2 pb-6 flex gap-x-2 items-center justify-between text-[initial] cursor-pointer question-button">
+              <h3 class="text-xl">Will my information remain confidential?</h3>
+
+              <span
+                class="w-8 h-8 bg-container text-primary border border-gray rounded-full text-3xl shrink-0 grid items-center transition-all duration-400 question-arrow ">
+                <i class="ri-arrow-down-s-line"></i>
+              </span>
+            </button>
+
+            <p class="max-h-0 overflow-hidden opacity-0 px-4 transition-all duration-400 question-text">
+              Fees depend on the nature, complexity, and duration of your case.
+              I make sure to clearly explain all costs before beginning any work, so
+              you always know what to expect. I also take the time to discuss potential
+              additional expenses upfront and answer any questions you may have.
+            </p>
+          </div>
+
+          <div class="bg-container shadow-card border border-gray rounded-xl question-card question-close">
+            <button
+              class="w-full pt-4 pl-4 pr-2 pb-6 flex gap-x-2 items-center justify-between text-[initial] cursor-pointer question-button">
+              <h3 class="text-xl">How long will my case take?</h3>
+
+              <span
+                class="w-8 h-8 bg-container text-primary border border-gray rounded-full text-3xl shrink-0 grid items-center transition-all duration-400 question-arrow ">
+                <i class="ri-arrow-down-s-line"></i>
+              </span>
+            </button>
+
+            <p class="max-h-0 overflow-hidden opacity-0 px-4 transition-all duration-400 question-text">
+              Fees depend on the nature, complexity, and duration of your case.
+              I make sure to clearly explain all costs before beginning any work, so
+              you always know what to expect. I also take the time to discuss potential
+              additional expenses upfront and answer any questions you may have.
+            </p>
+          </div>
+
+          <div class="bg-container shadow-card border border-gray rounded-xl question-card question-close">
+            <button
+              class="w-full pt-4 pl-4 pr-2 pb-6 flex gap-x-2 items-center justify-between text-[initial] cursor-pointer question-button">
+              <h3 class="text-xl">Do you handle cases outside your city?</h3>
+
+              <span
+                class="w-8 h-8 bg-container text-primary border border-gray rounded-full text-3xl shrink-0 grid items-center transition-all duration-400 question-arrow ">
+                <i class="ri-arrow-down-s-line"></i>
+              </span>
+            </button>
+
+            <p class="max-h-0 overflow-hidden opacity-0 px-4 transition-all duration-400 question-text">
+              Fees depend on the nature, complexity, and duration of your case.
+              I make sure to clearly explain all costs before beginning any work, so
+              you always know what to expect. I also take the time to discuss potential
+              additional expenses upfront and answer any questions you may have.
+            </p>
+          </div>
+
+          <div class="bg-container shadow-card border border-gray rounded-xl question-card question-close">
+            <button
+              class="w-full pt-4 pl-4 pr-2 pb-6 flex gap-x-2 items-center justify-between text-[initial] cursor-pointer question-button">
+              <h3 class="text-xl">How can I get started?</h3>
+
+              <span
+                class="w-8 h-8 bg-container text-primary border border-gray rounded-full text-3xl shrink-0 grid items-center transition-all duration-400 question-arrow ">
+                <i class="ri-arrow-down-s-line"></i>
+              </span>
+            </button>
+
+            <p class="max-h-0 overflow-hidden opacity-0 px-4 transition-all duration-400 question-text">
+              Fees depend on the nature, complexity, and duration of your case.
+              I make sure to clearly explain all costs before beginning any work, so
+              you always know what to expect. I also take the time to discuss potential
+              additional expenses upfront and answer any questions you may have.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- /questions -->
+
+    <!-- clients -->
+    <div class="section client">
+      <div class="grid relative gap-y-12">
+        <div class="container-page text-center mx-auto sm:max-w-lg">
+          <header class="mb-3">
+            <h5 class="font-bold mb-3">
+              <span class="inline-block w-3 h-3 rounded-full bg-primary mr-1"></span>
+              CLIENT FEEDBACK
+            </h5>
+
+            <h2 class="text-3xl font-bold md:text-5xl">
+              See What My <br>
+              <span class="italic">Clients Say</span>
+            </h2>
+          </header>
+
+          <p class="md:text-lg">
+            See how my guidance has made a real difference for my clients and their
+            cases in real life.
+          </p>
+        </div>
+
+        <div class="client-swiper swiper">
+          <div class="swiper-wrapper">
+
+            <!-- card -->
+            <div class="client-slide swiper-slide">
+              <img src="src/assets/imgs/clients-img.png" alt=""
+                class="absolute top-0 left-0 w-full h-full object-cover object-center z-1">
+              <div class="absolute top-0 left-0 w-full h-full z-5 client-gradient"></div>
+
+              <div class="relative grid gap-y-2 self-start z-10">
+                <div class="flex gap-2 items-center text-primary text-lg">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                </div>
+
+                <span class="text-sm font-semibold">5.0 Rating</span>
+              </div>
+
+              <p class="relative z-10 text-lg italic pt-24 pb-12 self-end">
+                Handled my case with precision and expertise. His communication was
+                excellent, and the outcome exceeded my expectations.
+              </p>
+
+              <section class="relative z-10 self-end">
+                <h3 class="text-xl">Samuel Reynols</h3>
+                <p class="city">New York</p>
+              </section>
+
+              <i class="ri-double-quotes-r absolute right-4 bottom-4 text-8xl z-10"></i>
+            </div>
+            <!-- /card -->
+
+            <div class="client-slide swiper-slide">
+              <img src="src/assets/imgs/clients-img.png" alt=""
+                class="absolute w-full h-full top-0 left-0 object-cover object-center z-1">
+              <div class="absolute w-full h-full top-0 left-0 z-5 client-gradient"></div>
+
+              <div class="relative grid gap-y-2 self-start z-10">
+                <div class="flex gap-2 items-center text-primary text-lg">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                </div>
+
+                <span class="text-sm font-semibold">5.0 Rating</span>
+              </div>
+
+              <p class="relative z-10 text-lg italic mt-24 mb-12 self-end">
+                Handled my case with precision and expertise. His communication was
+                excellent, and the outcome exceeded my expectations.
+              </p>
+
+              <section class="relative z-10 self-end">
+                <h3 class="text-xl">Samuel Reynols</h3>
+                <p class="city">New York</p>
+              </section>
+
+              <i class="ri-double-quotes-r absolute right-4 bottom-4 text-8xl z-10"></i>
+            </div>
+
+            <div class="client-slide swiper-slide">
+              <img src="src/assets/imgs/clients-img.png" alt=""
+                class="absolute w-full h-full top-0 left-0 object-cover object-center z-1">
+              <div class="absolute w-full h-full top-0 left-0 z-5 client-gradient"></div>
+
+              <div class="relative grid gap-y-2 self-start z-10">
+                <div class="flex gap-2 items-center text-primary text-lg">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                </div>
+
+                <span class="text-sm font-semibold">5.0 Rating</span>
+              </div>
+
+              <p class="relative z-10 text-lg italic mt-24 mb-12 self-end">
+                Handled my case with precision and expertise. His communication was
+                excellent, and the outcome exceeded my expectations.
+              </p>
+
+              <section class="relative z-10 self-end">
+                <h3 class="text-xl">Samuel Reynols</h3>
+                <p class="city">New York</p>
+              </section>
+
+              <i class="ri-double-quotes-r absolute right-4 bottom-4 text-8xl z-10"></i>
+            </div>
+
+          </div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev">
+            <i class="ri-arrow-left-s-line"></i>
+          </div>
+          <div class="swiper-button-next">
+            <i class="ri-arrow-right-s-line"></i>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- /clients -->
+
+    <!-- contact -->
+    <div id="contact" class="contact section" data-section="contact">
+
+      <div class="container-page text-center mx-auto sm:max-w-lg">
+        <header class="mb-3">
+          <h5 class="font-bold mb-3">
+            <span class="inline-block w-3 h-3 rounded-full bg-primary mr-1"></span>
+            CONTACT ME
+          </h5>
+
+          <h2 class="text-3xl font-bold md:text-5xl">
+            Start Your <br>
+            <span class="italic">Case Today</span>
+          </h2>
+        </header>
+      </div>
+
+      <div class="container-page grid gap-12 mt-8 mx-auto sm:max-w-lg md:max-w-280 md:grid-cols-2">
+        <form id="contact-form"
+          class="grid relative gap-y-4 bg-container py-4 px-3 border border-gray rounded-2xl shadow-card">
+
+          <!-- name -->
+          <div class="relative">
+            <input type="text" class="w-full bg-container text-title p-5 rounded-2xl border border-gray contact-input"
+              name="name" id="name" placeholder="Your Name" required autocomplete="off">
+            <label for=" name" class="hidden contact-label"></label>
+          </div>
+
+          <!-- email -->
+          <div class="relative">
+            <input type="email" class="w-full bg-container text-title p-5 rounded-2xl border border-gray contact-input"
+              name="email" id="email" placeholder="Your Email" required autocomplete="on">
+            <label for="email" class="hidden contact-label"></label>
+          </div>
+
+          <!-- body -->
+          <div class="relative">
+            <textarea
+              class="w-full bg-container text-title p-5 rounded-2xl border border-gray contact-input h-56 resize-none"
+              name="body" id="body" placeholder="Message: (legal service & phone)" required
+              autocomplete="on"></textarea>
+            <label for="body" class="hidden contact-label"></label>
+          </div>
+
+          <button type="submit" class="button justify-self-center mt-4 cursor-pointer md:justify-self-start">
+            <div class="w-10 h-10 bg-light rounded-full grid place-items-center">
+              <i class="ri-arrow-right-up-line text-primary text-lg"></i>
+            </div>
+
+            Send Message
+          </button>
+
+        </form>
+
+        <div class="h-95 w-full justify-self-center rounded-2xl overflow-hidden mx-auto sm:max-w-lg md:h-full">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12946.193359771152!2d51.45064831525691!3d35.78646956085227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e045a11030ae3%3A0xc2dbf948a20b749e!2sEkhtiarieh%2C%20District%203%2C%20Tehran%2C%20Tehran%20Province%2C%20Iran!5e0!3m2!1sen!2s!4v1791968735824!5m2!1sen!2s"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+
+    </div>
+    <!-- /contact -->
+
   </main>
 
-  <footer>
+  <a href="#" id="go-to-top"
+    class="fixed right-4 w-8 h-8 bg-light text-title flex justify-center items-center rounded-lg z-1000 shadow-card go-to-top">
+    <i class="ri-arrow-up-line"></i>
+  </a>
+
+  <footer class="relative mt-8 pt-36 pb-8">
+    <img src="src/assets/imgs/footer-bg.png" alt=""
+      class="absolute top-0 left-0 w-full h-full object-cover object-center z-1">
+    <div class="absolute top-0 left-0 w-full h-full z-5 footer-shadow"></div>
+
+    <div class="container-page grid gap-6 relative z-10 gap-y-12 lg:grid-cols-2">
+
+      <div class="group">
+
+        <!-- social media -->
+        <div class="flex gap-3 mb-6">
+          <a href="#" target="_blank" class="text-light text-xl transition-colors duration-400 hover:text-primary">
+            <i class="ri-instagram-line"></i>
+          </a>
+
+          <a href="#" target="_blank" class="text-light text-xl transition-colors duration-400 hover:text-primary">
+            <i class="ri-whatsapp-line"></i>
+          </a>
+
+          <a href="#" target="_blank" class="text-light text-xl transition-colors duration-400 hover:text-primary">
+            <i class="ri-telegram-line"></i>
+          </a>
+        </div>
+
+        <h3 class="text-light text-2xl mb-2">
+          Your Trusted <br>
+          Legal Guidance
+        </h3>
+        <p class="text-gray-300">
+          Expert legal advice for personal and business matters; build a stronger case.
+        </p>
+
+      </div>
+
+
+      <div class="grid grid-cols-2 gap-y-12 md:grid-cols-3">
+        <div>
+          <h3 class="subtitle text-light mb-6 text-xl">
+            Quick Links
+          </h3>
+
+          <div class="flex flex-col gap-3">
+            <a href="#about" class="text-gray-300 hover:text-primary">About</a>
+            <a href="#case" class="text-gray-300 hover:text-primary">Cases</a>
+            <a href="#service" class="text-gray-300 hover:text-primary">Services</a>
+            <a href="#contact" class="text-gray-300 hover:text-primary">Contact</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-light mb-6 text-xl">
+            Write Message
+          </h3>
+
+          <div class="flex flex-col gap-3">
+            <a href="#" target="_blank" class="text-gray-300 hover:text-primary">Instagram</a>
+            <a href="#" target="_blank" class="text-gray-300 hover:text-primary">Whatsapp</a>
+            <a href="#" target="_blank" class="text-gray-300 hover:text-primary">Telegram</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-light mb-6 text-xl">
+            Connect Me
+          </h3>
+
+          <div class="flex flex-col gap-3">
+
+            <div class="flex gap-2 items-center text-gray-300 hover:text-primary">
+              <i class="ri-mail-fill"></i>
+              <span>paul@email.com</span>
+            </div>
+
+            <address class="flex gap-2 items-center text-gray-300 hover:text-primary">
+              <i class="ri-phone-fill"></i>
+              <address>
+                <a href="tel:+0123456789">0123456789</a>
+              </address>
+            </address>
+
+            <address class="flex gap-2 items-center text-gray-300 hover:text-primary">
+              <i class="ri-map-pin-2-fill"></i>
+              <address>
+                Peru, Lima, The Sun #987
+              </address>
+            </address>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="relative z-10 text-light mt-24 text-center text-sm container-page">
+      <!-- date -->
+      <div class="date">
+        Paul Laws - <span id="footer-date">2026</span>
+      </div>
+
+      <!-- copyright -->
+      <div>
+        &copy; All Rights Reserved
+      </div>
+    </div>
 
   </footer>
 

@@ -20,6 +20,7 @@
   --shadow-service:
     inset 0 -96px 48px -40px hsl(0, 0%, 99%),
     inset 0 96px 48px -40px hsl(0, 0%, 99%);
+  --border-primary: hsl(41, 54%, 55%);
 
   --font-montserrat: "Montserrat", sans-serif; /* font-montserrat  */
   --font-playfair-display: "Playfair Display", serif;
@@ -35,7 +36,7 @@
 }
 
 @utility container-page {
-  @apply max-w-280 mx-4;
+  @apply max-w-280 px-4 mx-auto;
 }
 
 @utility section {
@@ -74,28 +75,51 @@
   );
 }
 
-.case-swiper {
-  @apply w-full h-full pb-20;
+html {
+  scroll-behavior: smooth;
+}
+
+.header-active .menu-link {
+  @apply md:text-default;
+}
+
+.nav-menu a.active {
+  @apply text-primary;
+}
+
+.case-swiper,
+.client-swiper {
+  @apply w-full h-full pb-20 sm:w-237 md:w-5xl;
 }
 
 .case .swiper-button-prev::after,
-.case .swiper-button-next::after {
+.case .swiper-button-next::after,
+.client .swiper-button-prev::after,
+.client .swiper-button-next::after {
   content: "";
 }
 
-.case :is(.swiper-button-prev, .swiper-button-next) {
-  @apply top-[initial] left-[initial] -bottom-0 w-10 h-10 m-[initial] bg-body border border-primary rounded-2xl text-primary text-2xl transition-all duration-400;
+.case :is(.swiper-button-prev, .swiper-button-next),
+.client :is(.swiper-button-prev, .swiper-button-next) {
+  @apply top-[initial] left-[initial] bottom-0 w-10 h-10 m-[initial] bg-body border border-primary rounded-2xl text-primary text-2xl transition-all duration-400;
 }
 
 .case :is(.swiper-button-prev:hover, .swiper-button-next:hover) {
   @apply bg-primary text-light;
 }
 
-.case .swiper-button-prev {
+.case :is(.swiper-button-prev:hover, .swiper-button-next:hover),
+.client :is(.swiper-button-prev:hover, .swiper-button-next:hover) {
+  @apply bg-primary text-light;
+}
+
+.case .swiper-button-prev,
+.client .swiper-button-prev {
   left: calc(50% - 3rem);
 }
 
-.case .swiper-button-next {
+.case .swiper-button-next,
+.client .swiper-button-next {
   right: calc(50% - 3rem);
 }
 
@@ -105,4 +129,73 @@
 
 .service-card:hover {
   background-color: hsl(0, 0%, 100%);
+}
+
+.question-open .question-text {
+  @apply max-h-125 opacity-100 pb-6;
+}
+
+.question-open .question-arrow {
+  @apply -rotate-180 bg-primary text-light border border-primary;
+}
+
+.client-gradient {
+  background-color: hsl(35, 50%, 100%);
+}
+
+.client-slide {
+  @apply relative w-75 rounded-2xl p-5 overflow-hidden border border-gray grid grid-rows-[1fr_auto];
+}
+
+.client .swiper-slide-active .client-gradient,
+.client .swiper-slide-duplicate-active .client-gradient {
+  background-color: hsla(35, 50%, 8%, 0.85);
+}
+
+.swiper-slide-active {
+  color: hsl(0, 0%, 99%);
+}
+
+.contact iframe {
+  @apply w-full h-full;
+}
+
+.contact-input:focus ~ .contact-label {
+  @apply opacity-0;
+}
+
+.contact-input:autofill {
+  @apply transition-colors duration-[6000s];
+}
+
+.footer-shadow {
+  background-color: hsla(35, 50%, 8%, 0.85);
+  box-shadow: inset 0 96px 48px -40px hsl(0, 0%, 99%);
+}
+
+.footer-connect :is(a, address) {
+  @apply text-light not-italic;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: hsl(0, 0%, 90%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(0, 0%, 60%);
+}
+
+::-webkit-scrollbar-thumbhover {
+  background-color: hsl(0, 0%, 50%);
+}
+
+/* go to top */
+.go-to-top {
+  @apply bottom-[-50%];
+}
+
+.go-to-top.active {
+  @apply bottom-8;
 }
