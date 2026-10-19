@@ -89,7 +89,7 @@ html {
 
 .case-swiper,
 .client-swiper {
-  @apply w-full h-full pb-20 sm:w-237 md:w-5xl;
+  @apply w-full h-full pb-20 sm:w-xl md:w-3xl lg:w-5xl;
 }
 
 .case .swiper-button-prev::after,

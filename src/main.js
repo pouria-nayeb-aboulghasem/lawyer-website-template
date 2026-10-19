@@ -44,9 +44,7 @@ window.addEventListener("scroll", () => {
     const sectionHeight = current.offsetHeight,
       sectionTop = current.offsetTop - 58,
       sectionId = current.getAttribute("id"),
-      sectionsClass = document.querySelector(
-        `.nav-menu a[href*=${sectionId}]`,
-      );
+      sectionsClass = document.querySelector(`.nav-menu a[href*=${sectionId}]`);
 
     if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
       sectionsClass.classList.add("active");
