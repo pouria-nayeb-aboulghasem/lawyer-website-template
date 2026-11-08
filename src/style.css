@@ -1,6 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 @import "tailwindcss";
 
+@font-face {
+  font-family: "IranYekan";
+  src:
+    url(./assets/fonts/IRANSansWeb.woff2) format("woff2"),
+    url(./assets/fonts/IRANSansWeb.woff) format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
 @theme {
   --color-primary: hsl(41, 54%, 55%);
   --color-primary-alt: hsl(41, 54%, 50%);
@@ -22,6 +31,7 @@
     inset 0 96px 48px -40px hsl(0, 0%, 99%);
   --border-primary: hsl(41, 54%, 55%);
 
+  --font-IranYekan: "IranYekan", sans-serif;
   --font-montserrat: "Montserrat", sans-serif; /* font-montserrat  */
   --font-playfair-display: "Playfair Display", serif;
 }
@@ -31,7 +41,11 @@
   h2,
   h3,
   h4 {
-    @apply text-secondary font-semibold font-playfair-display;
+    @apply text-secondary font-semibold font-IranYekan;
+  }
+
+  a {
+    @apply font-IranYekan;
   }
 }
 
@@ -52,7 +66,7 @@
 }
 
 @utility button {
-  @apply bg-primary text-light font-semibold inline-flex items-center gap-x-2 p-2 pr-4 rounded-[4rem] transition-all duration-400 hover:bg-primary-alt hover:shadow-primary;
+  @apply bg-primary text-light font-semibold inline-flex items-center gap-x-2 p-2 pl-4 rounded-[4rem] transition-all duration-400 hover:bg-primary-alt hover:shadow-primary;
 }
 
 @utility menu-active {
@@ -125,6 +139,7 @@ html {
 
 .slide {
   @apply relative w-85 rounded-2xl p-5 overflow-hidden grid grid-rows-[max-content];
+  direction: rtl;
 }
 
 .service-card:hover {
@@ -145,6 +160,7 @@ html {
 
 .client-slide {
   @apply relative w-75 rounded-2xl p-5 overflow-hidden border border-gray grid grid-rows-[1fr_auto];
+  direction: rtl;
 }
 
 .client .swiper-slide-active .client-gradient,
