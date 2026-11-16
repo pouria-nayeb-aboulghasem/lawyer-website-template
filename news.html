@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="fa-IR" dir="rtl">
+
+<head>
+    <!-- general -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- icons -->
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <link rel="shortcut icon" href="./favicon.png" type="image/png">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="node_modules/remixicon/fonts/remixicon.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.css">
+    <link rel="stylesheet" href="src/style.css" />
+
+    <!-- seo -->
+    <title>قالب سابت دادمانا</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+</head>
+
+<body class="bg-body text-default font-IranYekan">
+
+    <header id="header" class="fixed w-full top-0 left-0 z-100 transition-all duration-400 group header-active">
+        <nav class="h-14 flex justify-between items-center flex-row-reverse container-page">
+            <a id="logo" href="#home"
+                class="text-light font-semibold font-IranYekan text-lg transition-colors duration-400 group-[.header-active]:text-title">
+                دادمانا
+            </a>
+
+            <div id="menu"
+                class="fixed top-0 -right-full bg-shadow w-[80%] h-full backdrop-blur-sm pt-24 pl-0 pb-8 pr-12 z-100 transition-all duration-400 md:static md:h-auto md:w-auto md:p-0 md:bg-transparent nav-menu">
+                <ul class="flex flex-col gap-10 md:flex-row md:justify-end md:items-end">
+                    <li>
+                        <a href="#home"
+                            class="text-light font-semibold transition-colors duration-400 hover:text-primary menu-link">خانه</a>
+                    </li>
+                    <li>
+                        <a href="#about"
+                            class="text-light font-semibold transition-colors duration-400 hover:text-primary menu-link">درباره
+                            ما</a>
+                    </li>
+                    <li>
+                        <a href="#case"
+                            class="text-light font-semibold transition-colors duration-400 hover:text-primary menu-link">دپارتمان
+                            ها</a>
+                    </li>
+                    <li>
+                        <a href="#service"
+                            class="text-light font-semibold transition-colors duration-400 hover:text-primary menu-link">خدمات</a>
+                    </li>
+                    <li>
+                        <a href="#contact"
+                            class="text-light font-semibold transition-colors duration-400 hover:text-primary menu-link">تماس
+                            با
+                            ما</a>
+                    </li>
+                </ul>
+
+                <button id="close-mobile-menu"
+                    class="absolute text-light top-4 right-4 color-light text-lg cursor-pointer md:hidden"
+                    aria-label="Close mobile menu">
+                    <i class="ri-close-large-line"></i>
+                </button>
+            </div>
+
+            <div class="md:hidden">
+                <button id="open-mobile-menu"
+                    class="text-light fs-lg cursor-pointer transition-colors duration-400 group-[.header-active]:text-title"
+                    aria-label="Open mobile menu">
+                    <i class="ri-menu-line"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="overflow-hidden">
+
+        <div class="h-20"></div>
+
+
+        <!-- breadcrumb -->
+        <div class="container-page mt-6">
+            <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-sm">
+
+                <a href="/" class="flex items-center gap-1.5 text-gray-500 hover:text-blue-600 transition-colors">
+                    خانه
+                </a>
+
+                <i class="ri-arrow-left-s-line"></i>
+
+                <span class="font-semibold text-gray-900" aria-current="page">
+                    اهمیت قراردادهای حقوقی در معاملات تجاری و نقش آن در پیشگیری از اختلافات
+                </span>
+
+            </nav>
+        </div>
+
+        <article class="container-page mt-12">
+
+            <header>
+                <figure class="relative w-full max-w-2xl block mx-auto">
+                    <img src="src/assets/imgs/article.jpg" alt=""
+                        class="w-full max-w-2xl block mx-auto h-auto rounded-2xl" width="675" height="450" />
+
+                    <div class="absolute -bottom-6 -right-4 w-full max-w-sm h-64 rounded-2xl bg-primary -z-1 md:h-100">
+                    </div>
+                </figure>
+
+                <div class="flex justify-between items-center h-12 mt-8 text-sm">
+                    <time datetime="">تاریخ: ۱۴۰۵/۰۸/۲۵</time>
+
+                    <p>نویسنده: علی رضایی</p>
+                </div>
+
+                <div class="mt-6">
+                    <button class="button text-sm">حقوقی و تجاری</button>
+
+                    <h1 class="text-xl leading-[1.4] md:text-4xl mt-2">
+                        اهمیت قراردادهای حقوقی در معاملات تجاری و نقش آن در پیشگیری از اختلافات
+                    </h1>
+                </div>
+            </header>
+
+
+            <div class="text-justify md:text-lg flex flex-col gap-4 mt-8 leading-[1.9]">
+
+                <p>
+                    قراردادهای حقوقی یکی از مهم‌ترین ابزارهای ایجاد نظم و شفافیت در روابط تجاری و اقتصادی هستند. هرگونه
+                    همکاری میان اشخاص حقیقی و حقوقی، از خریدوفروش کالا گرفته تا ارائه خدمات و مشارکت در پروژه‌های
+                    اقتصادی، نیازمند توافقی روشن و مشخص است. تنظیم قرارداد اصولی باعث می‌شود حقوق و تعهدات طرفین
+                    به‌درستی تعریف شود و از بروز سوءتفاهم‌های احتمالی جلوگیری گردد.
+                </p>
+
+                <p>
+                    یکی از مهم‌ترین اصول تنظیم قرارداد، تعیین دقیق تعهدات و مسئولیت‌های هر یک از طرفین است. در یک
+                    قرارداد معتبر باید موضوع معامله، مبلغ توافق‌شده، نحوه پرداخت، زمان تحویل کالا یا خدمات و شرایط اجرای
+                    تعهدات به‌صورت شفاف مشخص شود. همچنین پیش‌بینی شرایط فسخ قرارداد و نحوه رسیدگی به اختلافات می‌تواند
+                    از پیچیده‌شدن مشکلات حقوقی در آینده جلوگیری کند.
+                </p>
+
+                <p>
+                    از سوی دیگر، آگاهی از قوانین و مقررات مرتبط با قراردادها اهمیت زیادی دارد. در حقوق ایران، قانون مدنی
+                    به‌ویژه مواد ۱۰، ۱۹۰ و ۲۱۹، چارچوب مهمی برای اعتبار و الزام‌آور بودن قراردادها تعیین کرده است. بر
+                    اساس این مقررات، قراردادهای خصوصی در صورتی که مخالف صریح قانون نباشند و شرایط اساسی صحت معاملات را
+                    داشته باشند، برای طرفین لازم‌الاجرا خواهند بود.
+                </p>
+
+                <p>
+                    استفاده از مشاوره حقوقی پیش از امضای قرارداد نیز یکی از اقدامات مؤثر برای کاهش ریسک‌های تجاری محسوب
+                    می‌شود. کارشناسان حقوقی می‌توانند مفاد قرارداد را بررسی کنند، بندهای مبهم یا پرخطر را شناسایی نمایند
+                    و راهکارهای مناسبی برای حفظ منافع طرفین ارائه دهند. این موضوع به‌خصوص در قراردادهای بلندمدت، معاملات
+                    با مبالغ بالا و همکاری‌های بین‌المللی اهمیت بیشتری پیدا می‌کند.
+                </p>
+
+                <p>
+                    در نهایت، قرارداد حقوقی صرفاً یک سند اداری نیست، بلکه ابزاری برای ایجاد اعتماد، حفظ منافع و تضمین
+                    اجرای تعهدات است. کسب‌وکارهایی که به تنظیم اصولی قراردادها توجه می‌کنند، معمولاً با ریسک‌های حقوقی
+                    کمتری مواجه می‌شوند و می‌توانند روابط تجاری پایدارتر و مطمئن‌تری ایجاد کنند. بنابراین، توجه به اصول
+                    حقوقی در تمام مراحل یک معامله، از مذاکره اولیه تا اجرای نهایی قرارداد، ضرورتی انکارناپذیر است.
+                </p>
+
+            </div>
+
+            <footer class="mt-8">
+                <ul class="flex flex-wrap gap-2">
+                    <li>
+                        <button class="button">قراردادهای حقوقی و تجاری</button>
+                    </li>
+                    <li>
+                        <button href="#" class="button">پیشگیری از اختلافات حقوقی</button>
+                    </li>
+                </ul>
+            </footer>
+
+        </article>
+
+    </main>
+
+
+    <footer class="relative mt-8 pt-36 pb-8">
+        <img src="src/assets/imgs/footer-bg.png" alt=""
+            class="absolute top-0 left-0 w-full h-full object-cover object-center z-1">
+        <div class="absolute top-0 left-0 w-full h-full z-5 footer-shadow"></div>
+
+        <div class="container-page grid gap-6 relative z-10 gap-y-12 lg:grid-cols-2">
+
+            <div class="group">
+
+                <!-- social media -->
+                <div class="flex gap-3 mb-6">
+                    <a href="#" target="_blank"
+                        class="text-light text-xl transition-colors duration-400 hover:text-primary opacity-25 cursor-not-allowed">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+
+                    <a href="#" target="_blank"
+                        class="text-light text-xl transition-colors duration-400 hover:text-primary disabled:opacity-25 disabled:cursor-disallow">
+                        <i class="ri-whatsapp-line"></i>
+                    </a>
+
+                    <a href="#" target="_blank" disabled
+                        class="text-light text-xl transition-colors duration-400 hover:text-primary disabled:opacity-25 disabled:cursor-disallow">
+                        <i class="ri-telegram-line"></i>
+                    </a>
+                </div>
+
+                <h3 class="text-light font-normal text-xl mb-2">
+                    <span class="font-bold text-2xl">دادمانا</span>
+                    راهنمای حقوقی
+                    <span class="text-primary">مورد اعتماد شما</span>
+                </h3>
+                <p class="text-gray-300">
+                    مشاوره حقوقی تخصصی برای امور شخصی و تجاری؛ <br />
+                    به منظور داشتن پرونده‌ حقوقی قوی‌تر.
+                </p>
+
+            </div>
+
+
+            <div class="grid grid-cols-2 gap-y-12 md:grid-cols-3">
+                <div>
+                    <h3 class="subtitle text-light mb-6 text-xl">
+                        دسترسی سریع
+                    </h3>
+
+                    <div class="flex flex-col gap-3">
+                        <a href="#about" class="text-gray-300 hover:text-primary">درباره ما</a>
+                        <a href="#case" class="text-gray-300 hover:text-primary">پرونده ها</a>
+                        <a href="#service" class="text-gray-300 hover:text-primary">خدمات</a>
+                        <a href="#contact" class="text-gray-300 hover:text-primary">تماس با ما</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-light mb-6 text-xl">
+                        ارسال پیام
+                    </h3>
+
+                    <div class="flex flex-col gap-3">
+                        <a href="#" target="_blank" class="text-gray-300 hover:text-primary">اینستاگرام</a>
+                        <a href="#" target="_blank" class="text-gray-300 hover:text-primary">واتس آپ</a>
+                        <a href="#" target="_blank" class="text-gray-300 hover:text-primary">تلگرام</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-light mb-6 text-xl">
+                        تماس با ما
+                    </h3>
+
+                    <div class="flex flex-col gap-3">
+
+                        <div class="flex gap-2 items-center text-gray-300 hover:text-primary">
+                            <i class="ri-mail-fill"></i>
+                            <span>info@dadmana.com</span>
+                        </div>
+
+                        <address class="flex gap-2 items-center text-gray-300 hover:text-primary">
+                            <i class="ri-phone-fill"></i>
+                            <address class="not-italic">
+                                <a href="tel:+0123456789">0123456789</a>
+                            </address>
+                        </address>
+
+                        <address class="flex gap-2 items-center text-gray-300 hover:text-primary">
+                            <i class="ri-map-pin-2-fill"></i>
+                            <address class="not-italic">
+                                تهران - بلوار جهانبخش نژاد - روبروی پاساژ پارک سنتر - مجتمع مهر - پلاک ۱ - واحد ۲
+                            </address>
+                        </address>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="relative z-10 text-light mt-24 text-center text-sm container-page">
+            <!-- date -->
+            <div class="date">
+                <a href="#" class="hover:text-primary transition duration-300">دادمانا</a>
+                - <span id="footer-date">2026</span>
+            </div>
+
+            <!-- copyright -->
+            <div>
+                &copy; تمام حقوق مادی و معنوی محفوظ است.
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

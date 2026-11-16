@@ -14,8 +14,10 @@
   --color-primary: hsl(41, 54%, 55%);
   --color-primary-alt: hsl(41, 54%, 50%);
   --color-secondary: hsl(35, 50%, 8%);
-  --color-title: hsl(41, 60%, 8%); /* text-title */
-  --color-default: hsl(41, 8%, 32%); /* text */
+  --color-title: hsl(41, 60%, 8%);
+  /* text-title */
+  --color-default: hsl(41, 8%, 32%);
+  /* text */
   --color-light: hsl(0, 0%, 99%);
   --color-gray: hsl(0, 0%, 85%);
   --color-body: hsl(0, 0%, 99%);
@@ -32,11 +34,13 @@
   --border-primary: hsl(41, 54%, 55%);
 
   --font-IranYekan: "IranYekan", sans-serif;
-  --font-montserrat: "Montserrat", sans-serif; /* font-montserrat  */
+  --font-montserrat: "Montserrat", sans-serif;
+  /* font-montserrat  */
   --font-playfair-display: "Playfair Display", serif;
 }
 
 @layer base {
+
   h1,
   h2,
   h3,
@@ -82,11 +86,9 @@
 }
 
 @utility case-gradient {
-  background-image: linear-gradient(
-    180deg,
-    hsla(40, 51%, 8%, 0.8) 70%,
-    hsla(40, 50%, 35%, 0.8) 100%
-  );
+  background-image: linear-gradient(180deg,
+      hsla(40, 51%, 8%, 0.8) 70%,
+      hsla(40, 50%, 35%, 0.8) 100%);
 }
 
 html {
@@ -102,19 +104,23 @@ html {
 }
 
 .case-swiper,
-.client-swiper {
+.client-swiper,
+.human-swiper {
   @apply w-full h-full pb-20 sm:w-xl md:w-3xl lg:w-5xl;
 }
 
 .case .swiper-button-prev::after,
 .case .swiper-button-next::after,
 .client .swiper-button-prev::after,
-.client .swiper-button-next::after {
+.client .swiper-button-next::after,
+.human .swiper-button-prev::after,
+.human .swiper-button-next::after {
   content: "";
 }
 
 .case :is(.swiper-button-prev, .swiper-button-next),
-.client :is(.swiper-button-prev, .swiper-button-next) {
+.client :is(.swiper-button-prev, .swiper-button-next),
+.human :is(.swiper-button-prev, .swiper-button-next) {
   @apply top-[initial] left-[initial] bottom-0 w-10 h-10 m-[initial] bg-body border border-primary rounded-2xl text-primary text-2xl transition-all duration-400;
 }
 
@@ -123,17 +129,20 @@ html {
 }
 
 .case :is(.swiper-button-prev:hover, .swiper-button-next:hover),
-.client :is(.swiper-button-prev:hover, .swiper-button-next:hover) {
+.client :is(.swiper-button-prev:hover, .swiper-button-next:hover),
+.human :is(.swiper-button-prev:hover, .swiper-button-next:hover) {
   @apply bg-primary text-light;
 }
 
 .case .swiper-button-prev,
-.client .swiper-button-prev {
+.client .swiper-button-prev,
+.human .swiper-button-prev {
   left: calc(50% - 3rem);
 }
 
 .case .swiper-button-next,
-.client .swiper-button-next {
+.client .swiper-button-next,
+.human .swiper-button-next {
   right: calc(50% - 3rem);
 }
 
@@ -176,7 +185,7 @@ html {
   @apply w-full h-full;
 }
 
-.contact-input:focus ~ .contact-label {
+.contact-input:focus~.contact-label {
   @apply opacity-0;
 }
 
@@ -214,4 +223,10 @@ html {
 
 .go-to-top.active {
   @apply bottom-8;
+}
+
+/* department page */
+.img-shadow::after {
+  content: "";
+  @apply -right-4 -bottom-6 absolute w-full max-w-90 h-84 bg-primary rounded-2xl -z-1;
 }

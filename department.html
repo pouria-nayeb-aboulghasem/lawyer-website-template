@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="fa-IR" dir="rtl">
+
+<head>
+    <!-- general -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- icons -->
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <link rel="shortcut icon" href="./favicon.png" type="image/png">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="node_modules/remixicon/fonts/remixicon.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.css">
+    <link rel="stylesheet" href="src/style.css" />
+
+    <!-- seo -->
+    <title>قالب سابت دادمانا</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+</head>
+
+<body class="bg-body text-default font-IranYekan">
+
+    <header id="header" class="fixed w-full top-0 left-0 z-100 transition-all duration-400 group header-active">
+        <nav class="h-14 flex justify-between items-center flex-row-reverse container-page">
+            <a id="logo" href="#home"
+                class="text-light font-semibold font-IranYekan text-lg transition-colors duration-400 group-[.header-active]:text-title">
+                دادمانا
+            </a>
+
+            <div id="menu"
+                class="fixed top-0 -right-full bg-shadow w-[80%] h-full backdrop-blur-sm pt-24 pl-0 pb-8 pr-12 z-100 transition-all duration-400 md:static md:h-auto md:w-auto md:p-0 md:bg-transparent nav-menu">
+                <ul class="flex flex-col gap-10 md:flex-row md:justify-end md:items-end">
+                    <li>
+                        <a href="#home"
+                            class="text-light font-semibold transition-colors duration-400 hover:text-primary menu-link">خانه</a>
+                    </li>
+                    <li>
+                        <a href="#about"
+                            class="text-light font-semibold transition-colors duration-400 hover:text-primary menu-link">درباره
+                            ما</a>
+                    </li>
+                    <li>
+                        <a href="#case"
+                            class="text-light font-semibold transition-colors duration-400 hover:text-primary menu-link">دپارتمان
+                            ها</a>
+                    </li>
+                    <li>
+                        <a href="#service"
+                            class="text-light font-semibold transition-colors duration-400 hover:text-primary menu-link">خدمات</a>
+                    </li>
+                    <li>
+                        <a href="#contact"
+                            class="text-light font-semibold transition-colors duration-400 hover:text-primary menu-link">تماس
+                            با
+                            ما</a>
+                    </li>
+                </ul>
+
+                <button id="close-mobile-menu"
+                    class="absolute text-light top-4 right-4 color-light text-lg cursor-pointer md:hidden"
+                    aria-label="Close mobile menu">
+                    <i class="ri-close-large-line"></i>
+                </button>
+            </div>
+
+            <div class="md:hidden">
+                <button id="open-mobile-menu"
+                    class="text-light fs-lg cursor-pointer transition-colors duration-400 group-[.header-active]:text-title"
+                    aria-label="Open mobile menu">
+                    <i class="ri-menu-line"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="overflow-hidden">
+
+        <div class="h-20"></div>
+
+
+        <div class="container-page mt-6">
+            <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-sm">
+
+                <a href="/" class="flex items-center gap-1.5 text-gray-500 hover:text-blue-600 transition-colors">
+                    خانه
+                </a>
+
+                <i class="ri-arrow-left-s-line"></i>
+
+                <span class="font-semibold text-gray-900" aria-current="page">
+                    دپارتمان امور تجاری، بازرگانی و گمرک
+                </span>
+
+            </nav>
+        </div>
+
+
+        <!-- home -->
+        <div class="container-page mt-12">
+            <div class="grid items-center justify-items-center md:grid-cols-2">
+
+                <figure class="md:col-span-1 img-shadow relative md:order-1">
+                    <img src="src/assets/imgs/department-1.png" alt="دپارتمان امور تجاری، بازرگانی و گمرک" width="600"
+                        height="800" class="w-full max-w-92 h-auto block rounded-2xl" />
+                </figure>
+
+                <section class="md:col-span-1 mt-16">
+                    <h1 class="text-xl md:text-4xl">
+                        دپارتمان امور تجاری، بازرگانی و گمرک
+                    </h1>
+
+                    <div class="my-6 text-justify leading-9 text-md md:text-lg md:order-2">
+                        دپارتمان امور تجاری، بازرگانی و گمرک مسئول برنامه‌ریزی و مدیریت فعالیت‌های تجاری و بازرگانی
+                        سازمان،
+                        از جمله تأمین کالا، خرید و فروش و توسعه همکاری‌های تجاری است.
+                        این دپارتمان بر فرآیندهای واردات و صادرات، ثبت سفارش، ترخیص کالا و انجام امور گمرکی نظارت
+                        می‌کند.
+                        همچنین با مدیریت تشریفات قانونی، اسناد تجاری و هماهنگی با سازمان‌ها و نهادهای مرتبط، به تسهیل
+                        مبادلات تجاری و کاهش هزینه‌ها کمک می‌کند.
+                    </div>
+                </section>
+            </div>
+
+        </div>
+        <!-- /home -->
+
+        <!-- human resource -->
+        <div id="human" class="human section mt-12">
+            <div class="grid gap-12 relative">
+                <section class="container-page text-center mx-auto sm:max-w-lg">
+
+                    <header class="mb-3">
+                        <h5 class="font-bold mb-3">
+                            <span class="inline-block w-3 h-3 rounded-full bg-primary ml-1"></span>
+                            نیروهای انسانی
+                        </h5>
+
+                        <h2 class="text-3xl font-bold leading-[1.3] md:text-5xl">
+                            نیرو انسانی
+                            دپارتمان <span class="text-primary">امور تجاری بازرگانی و گمرک</span>
+                        </h2>
+                    </header>
+
+                    <p class="md:text-lg">
+
+                        نیروهای انسانی ما با تفکیک وظایف و ارائه راهکارهای موثر<br />
+                        موکلان را در مسیر دریافت نتایج مطلوب یاری می دهند.
+                    </p>
+
+                </section>
+
+                <div class="human-swiper swiper" dir="ltr">
+                    <div class="swiper-wrapper">
+
+                        <!-- card -->
+                        <div class="slide swiper-slide">
+                            <div class="absolute top-0 left-0 w-full h-full case-gradient z-5"></div>
+
+                            <div class="relative z-10 flex gap-x-2 items-center self-start mb-1">
+                                <div class="w-4 h-4 rounded-full bg-primary"></div>
+                                <p class="text-light font-semibold text-sm border border-light py-1 px-2 rounded-4xl">
+                                    رئیس دپارتمان
+                                </p>
+                            </div>
+
+                            <article class="relative z-10 mt-26 self-end">
+                                <img src="src/assets/imgs/avatar.jpg" alt=""
+                                    class="w-16 h-16 rounded-full object-cover mb-3">
+                                <h3 class="mb-2 text-semibold max-w-64 line-clamp-2 text-light text-2xl">
+                                    محمد علی صداقت
+                                </h3>
+
+                                <p class="text-light mb-6 line-clamp-3">
+                                    وکیل پایه یک دادگستری با ۱۵ سال سابقه وکالت حرفه ای
+                                </p>
+
+                            </article>
+                        </div>
+                        <!-- /card -->
+
+                    </div>
+
+                    <div class="swiper-button-prev">
+                        <i class="ri-arrow-left-s-line"></i>
+                    </div>
+                    <div class="swiper-button-next">
+                        <i class="ri-arrow-right-s-line"></i>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- /human resource -->
+
+        <!-- service -->
+        <div id="service" class="section relative mt-12">
+            <div class="container-page relative z-10 pt-6 text-center mx-auto sm:max-w-lg">
+                <header class="mb-6">
+                    <h5 class="font-bold mb-3">
+                        <span class="inline-block w-3 h-3 rounded-full bg-primary mr-1"></span>
+                        خدمات ما
+                    </h5>
+
+                    <h2 class="text-3xl font-bold leading-[1.3] md:text-5xl">
+                        لیست خدمات <br>
+                        <span class="text-primary">
+                            امور تجاری بازرگانی و گمرک
+                        </span>
+                    </h2>
+                </header>
+
+                <a href="#contact" class="button">
+                    <div class="w-10 h-10 rounded-full bg-white grid place-items-center">
+                        <i class="ri-arrow-right-up-line text-primary text-lg"></i>
+                    </div>
+                    <span>
+                        تشکیل پرونده
+                    </span>
+                </a>
+            </div>
+
+            <div
+                class="grid gap-6 container-page relative z-10 pt-12 pb-28 mx-auto sm:max-w-lg md:grid-cols-3 md:max-w-280">
+
+                <!-- card -->
+                <article
+                    class="bg-[hsla(0,0%,100%, 0.1)] backdrop-blur-lg p-4 rounded-lg border border-gray grid gap-y-4">
+                    <header>
+                        <span class="italic font-semibold text-4xl  font-playfair-display">01</span>
+                        <h3 class="text-2xl ">
+                            حقوق شرکت‌ها و کسب‌وکار
+                        </h3>
+                    </header>
+
+                    <footer>
+                        <p class=" mb-5">
+                            مشاوره حقوقی برای استارتاپ‌ها و شرکت‌های جاافتاده؛ از ثبت شرکت تا استخدام نیرو.
+                        </p>
+                    </footer>
+                </article>
+                <!-- /card -->
+
+                <article
+                    class="bg-[hsla(0,0%,100%, 0.1)] backdrop-blur-lg p-4 rounded-lg border border-gray grid gap-y-4">
+                    <header>
+                        <span class="italic font-semibold text-4xl  font-playfair-display">02</span>
+                        <h3 class="text-2xl ">
+                            دادرسی مدنی
+                        </h3>
+                    </header>
+
+                    <footer>
+                        <p class=" mb-5">
+                            مشاوره حقوقی برای استارتاپ‌ها و شرکت‌های جاافتاده؛ از ثبت شرکت تا استخدام نیرو.
+                        </p>
+                    </footer>
+                </article>
+
+                <article
+                    class="bg-[hsla(0,0%,100%, 0.1)] backdrop-blur-lg p-4 rounded-lg border border-gray grid gap-y-4">
+                    <header>
+                        <span class="italic font-semibold text-4xl  font-playfair-display">03</span>
+                        <h3 class="text-2xl ">
+                            دفاع کیفری
+                        </h3>
+                    </header>
+
+                    <footer>
+                        <p class="mb-5">
+                            مشاوره حقوقی برای استارتاپ‌ها و شرکت‌های جاافتاده؛ از ثبت شرکت تا استخدام نیرو.
+                        </p>
+                    </footer>
+                </article>
+
+                <article
+                    class="bg-[hsla(0,0%,100%, 0.1)] backdrop-blur-lg p-4 rounded-lg border border-gray grid gap-y-4">
+                    <header>
+                        <span class="italic font-semibold text-4xl  font-playfair-display">04</span>
+                        <h3 class="text-2xl ">
+                            قوانین خانواده و طلاق
+                        </h3>
+                    </header>
+
+                    <footer>
+                        <p class=" mb-5">
+                            مشاوره حقوقی برای استارتاپ‌ها و شرکت‌های جاافتاده؛ از ثبت شرکت تا استخدام نیرو.
+                        </p>
+                    </footer>
+                </article>
+
+                <article
+                    class="bg-[hsla(0,0%,100%, 0.1)] backdrop-blur-lg p-4 rounded-lg border border-gray grid gap-y-4">
+                    <header>
+                        <span class="italic font-semibold text-4xl  font-playfair-display">05</span>
+                        <h3 class="text-2xl ">
+                            املاک و مستقلات
+                        </h3>
+                    </header>
+
+                    <footer>
+                        <p class=" mb-5">
+                            مشاوره حقوقی برای استارتاپ‌ها و شرکت‌های جاافتاده؛ از ثبت شرکت تا استخدام نیرو.
+                        </p>
+                    </footer>
+                </article>
+
+            </div>
+        </div>
+        <!-- /service -->
+    </main>
+
+    <footer class="relative mt-8 pt-36 pb-8">
+        <img src="src/assets/imgs/footer-bg.png" alt=""
+            class="absolute top-0 left-0 w-full h-full object-cover object-center z-1">
+        <div class="absolute top-0 left-0 w-full h-full z-5 footer-shadow"></div>
+
+        <div class="container-page grid gap-6 relative z-10 gap-y-12 lg:grid-cols-2">
+
+            <div class="group">
+
+                <!-- social media -->
+                <div class="flex gap-3 mb-6">
+                    <a href="#" target="_blank"
+                        class="text-light text-xl transition-colors duration-400 hover:text-primary opacity-25 cursor-not-allowed">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+
+                    <a href="#" target="_blank"
+                        class="text-light text-xl transition-colors duration-400 hover:text-primary disabled:opacity-25 disabled:cursor-disallow">
+                        <i class="ri-whatsapp-line"></i>
+                    </a>
+
+                    <a href="#" target="_blank" disabled
+                        class="text-light text-xl transition-colors duration-400 hover:text-primary disabled:opacity-25 disabled:cursor-disallow">
+                        <i class="ri-telegram-line"></i>
+                    </a>
+                </div>
+
+                <h3 class="text-light font-normal text-xl mb-2">
+                    <span class="font-bold text-2xl">دادمانا</span>
+                    راهنمای حقوقی
+                    <span class="text-primary">مورد اعتماد شما</span>
+                </h3>
+                <p class="text-gray-300">
+                    مشاوره حقوقی تخصصی برای امور شخصی و تجاری؛ <br />
+                    به منظور داشتن پرونده‌ حقوقی قوی‌تر.
+                </p>
+
+            </div>
+
+
+            <div class="grid grid-cols-2 gap-y-12 md:grid-cols-3">
+                <div>
+                    <h3 class="subtitle text-light mb-6 text-xl">
+                        دسترسی سریع
+                    </h3>
+
+                    <div class="flex flex-col gap-3">
+                        <a href="#about" class="text-gray-300 hover:text-primary">درباره ما</a>
+                        <a href="#case" class="text-gray-300 hover:text-primary">پرونده ها</a>
+                        <a href="#service" class="text-gray-300 hover:text-primary">خدمات</a>
+                        <a href="#contact" class="text-gray-300 hover:text-primary">تماس با ما</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-light mb-6 text-xl">
+                        ارسال پیام
+                    </h3>
+
+                    <div class="flex flex-col gap-3">
+                        <a href="#" target="_blank" class="text-gray-300 hover:text-primary">اینستاگرام</a>
+                        <a href="#" target="_blank" class="text-gray-300 hover:text-primary">واتس آپ</a>
+                        <a href="#" target="_blank" class="text-gray-300 hover:text-primary">تلگرام</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-light mb-6 text-xl">
+                        تماس با ما
+                    </h3>
+
+                    <div class="flex flex-col gap-3">
+
+                        <div class="flex gap-2 items-center text-gray-300 hover:text-primary">
+                            <i class="ri-mail-fill"></i>
+                            <span>info@dadmana.com</span>
+                        </div>
+
+                        <address class="flex gap-2 items-center text-gray-300 hover:text-primary">
+                            <i class="ri-phone-fill"></i>
+                            <address class="not-italic">
+                                <a href="tel:+0123456789">0123456789</a>
+                            </address>
+                        </address>
+
+                        <address class="flex gap-2 items-center text-gray-300 hover:text-primary">
+                            <i class="ri-map-pin-2-fill"></i>
+                            <address class="not-italic">
+                                تهران - بلوار جهانبخش نژاد - روبروی پاساژ پارک سنتر - مجتمع مهر - پلاک ۱ - واحد ۲
+                            </address>
+                        </address>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="relative z-10 text-light mt-24 text-center text-sm container-page">
+            <!-- date -->
+            <div class="date">
+                <a href="#" class="hover:text-primary transition duration-300">دادمانا</a>
+                - <span id="footer-date">2026</span>
+            </div>
+
+            <!-- copyright -->
+            <div>
+                &copy; تمام حقوق مادی و معنوی محفوظ است.
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.js"></script>
+    <script src="src/main.js"></script>
+    <script>
+        const swiperHuman = new Swiper(".human-swiper", {
+            loop: true,
+            grabCursor: true,
+            slidesPerView: "auto",
+            centeredSlides: "auto",
+            spaceBetween: 16,
+            speed: 600,
+            effect: "creative",
+            creativeEffect: {
+                limitProgress: 2,
+                prev: {
+                    translate: ["-100%", 0, 0],
+                    scale: 0.85,
+                },
+                next: {
+                    translate: ["100%", 0, 0],
+                    scale: 0.85,
+                },
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            // autoplay: {
+            //   delay: 3000,
+            //   disableOnInteraction: false,
+            // },
+        });
+    </script>
+</body>
+
+</html>

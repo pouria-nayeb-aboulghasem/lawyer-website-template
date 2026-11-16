@@ -15,24 +15,6 @@ if (closeMobileMenu) {
   });
 }
 
-// step 2: link
-const menuLinks = document.querySelectorAll(".menu-link");
-
-menuLinks.forEach((menuLink) => {
-  menuLink.addEventListener("click", () => {
-    menu.classList.remove("menu-active");
-  });
-});
-
-// step 3: header
-const header = document.querySelector("#header");
-
-window.addEventListener("scroll", (e) => {
-  this.scrollY >= 25
-    ? header.classList.add("header-active")
-    : header.classList.remove("header-active");
-});
-
 // active links
 
 const sections = document.querySelectorAll("[data-section]");

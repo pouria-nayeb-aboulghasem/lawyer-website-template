@@ -189,12 +189,15 @@
               </div>
 
               <article class="relative z-10 mt-26 self-end">
-                <h3 class="mb-2 text-semibold text-light text-2xl">
+                <h3 class="mb-2 text-semibold max-w-64 line-clamp-2 text-light text-2xl">
                   تثبیت مالکیت در <br />
                   <span> اختلافات ملکی </span>
                 </h3>
 
-                <p class="text-light mb-6">
+                <p class="text-light mb-6 line-clamp-3">
+                  مدیریت اختلاف ملکی پیچیده، تثبیت حقوق مالکیت موکلان، و
+                  هموارسازی مسیر برای توسعه‌ی بی‌دغدغه‌ی املاک و مستقلات.
+
                   مدیریت اختلاف ملکی پیچیده، تثبیت حقوق مالکیت موکلان، و
                   هموارسازی مسیر برای توسعه‌ی بی‌دغدغه‌ی املاک و مستقلات.
                 </p>
@@ -1012,6 +1015,25 @@
   <!-- scripts -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.js"></script>
   <script src="src/main.js"></script>
+  <script>
+    // step 2: link
+    const menuLinks = document.querySelectorAll(".menu-link");
+
+    menuLinks.forEach((menuLink) => {
+      menuLink.addEventListener("click", () => {
+        menu.classList.remove("menu-active");
+      });
+    });
+
+    // step 3: header
+    const header = document.querySelector("#header");
+
+    window.addEventListener("scroll", (e) => {
+      this.scrollY >= 25
+        ? header.classList.add("header-active")
+        : header.classList.remove("header-active");
+    });
+  </script>
 </body>
 
 </html>
